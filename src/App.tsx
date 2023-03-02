@@ -24,7 +24,17 @@ import axios, { AxiosRequestConfig } from "axios";
 import { Header, Layout, Sider, Title } from "components/layout";
 import { ColorModeContextProvider } from "contexts";
 import { CredentialResponse } from "interfaces/google";
-import { Login } from "pages/login";
+import {
+  AgentProfile,
+  Agents,
+  AllProperties,
+  CreateProperty,
+  EditProperty,
+  Home,
+  Login,
+  MyProfile,
+  PropertyDetails,
+} from "pages";
 import { parseJwt } from "utils/parse-jwt";
 
 const axiosInstance = axios.create();
@@ -138,6 +148,7 @@ function App() {
           routerProvider={routerProvider}
           authProvider={authProvider}
           LoginPage={Login}
+          DashboardPage={Home}
         />
       </RefineSnackbarProvider>
     </ColorModeContextProvider>
